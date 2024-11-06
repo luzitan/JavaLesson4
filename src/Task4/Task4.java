@@ -22,9 +22,8 @@ public static void main(String[] args) {
     System.out.println(rotateDeque(deque, n));
 }
 public static Deque rotateDeque(Deque deque, int n) {
-    if (deque.isEmpty()) return deque;
+    if (deque.isEmpty() || n == 0) return deque;
     if (n > deque.size()) n %= deque.size();
-    if (n == 0) return deque;
     if (n > 0) {
         for (int i = 0; i < n; i++) {
             deque.addLast(deque.getFirst());
