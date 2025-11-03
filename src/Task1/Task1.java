@@ -10,12 +10,7 @@ public class Task1 {
 //    которых нечетная. Используйте LinkedList и стандартные методы.
 public static void main(String[] args) {
     LinkedList link = new LinkedList(Arrays.asList("лис", "койот", "ёж", "енот", "змея", "пёс"));
-    for (int i = 0; i < link.size(); i++) {
-        if (link.get(i).toString().length() % 2 != 0){
-            link.remove(i);
-            i--;
-        }
-    }
+    LLTasks.removeOddLengthStrings(link);
     System.out.println(link);
 
 }
