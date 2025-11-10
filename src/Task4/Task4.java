@@ -4,6 +4,8 @@ import java.security.PublicKey;
 import java.util.Deque;
 import java.util.LinkedList;
 
+import static Task4.DequeTasks.rotateDeque;
+
 public class Task4 {
 //    Задача 4. Сдвиг очереди
 //    Реализуйте метод rotateDeque в классе DequeTasks, который принимает
@@ -21,24 +23,6 @@ public static void main(String[] args) {
     int n = 11;
     System.out.println(rotateDeque(deque, n));
 }
-public static Deque rotateDeque(Deque deque, int n) {
-    if (deque.isEmpty() || n == 0) return deque;
-    if (n > deque.size()) n %= deque.size();
-    if (n > 0) {
-        for (int i = 0; i < n; i++) {
-            deque.addLast(deque.getFirst());
-            deque.removeFirst();
-        }
-        return deque;
-    }
-    for (int i = 0; i < -n; i++) {
-        deque.addFirst(deque.getLast());
-        deque.removeLast();
-    }
-    return deque;
 
-
-
-}
 
 }

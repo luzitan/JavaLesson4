@@ -3,6 +3,8 @@ package Task5;
 import java.util.Deque;
 import java.util.LinkedList;
 
+import static Task5.DequeTasks.removeAllOccurrences;
+
 public class Task5 {
 //    Задача 5*. Удаление слова из очереди
 //    Реализуйте метод removeAllOccurrences в классе DequeTasks, который
@@ -20,8 +22,5 @@ public static void main(String[] args) {
     String value = "лис";
     System.out.println(removeAllOccurrences(deque, value));
 }
-public static Deque removeAllOccurrences(Deque<String> deque, String value) {
-    deque.removeIf(el -> el.equals(value));
-    return deque;
-}
+
 }
